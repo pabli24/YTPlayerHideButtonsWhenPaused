@@ -15,7 +15,7 @@
 
 <br>
 
-![Screenshot](./img/ytplayer.png)
+![Screenshot](./img/ytplayer.webp)
 
 ## License
 [MIT](https://github.com/pabli24/YTPlayerHideButtonsWhenPaused/blob/main/LICENSE)
