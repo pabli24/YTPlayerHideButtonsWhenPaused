@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           YouTube - Show Buttons On Hover When Paused
 @namespace      https://github.com/pabli24
-@version        1.0.1
+@version        1.0.2
 @description    Hide buttons when the video is paused and show them again when hovered
 @author         Pabli
 @license        MIT
@@ -10,7 +10,7 @@
 ==/UserStyle== */
 
 @-moz-document domain("youtube.com") {
-.paused-mode > div:not(.html5-video-container) {
+.paused-mode:not(.unstarted-mode) > div:not(.html5-video-container) {
     opacity: 0
 }
 .paused-mode:hover > div:not(.html5-video-container) {
