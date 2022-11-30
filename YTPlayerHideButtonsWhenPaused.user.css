@@ -1,19 +1,28 @@
 /* ==UserStyle==
 @name           YouTube - Show Buttons On Hover When Paused
 @namespace      https://github.com/pabli24
-@version        1.0.2
+@version        1.1.0
 @description    Hide buttons when the video is paused and show them again when hovered
 @author         Pabli
 @license        MIT
 @homepageURL    https://github.com/pabli24/YTPlayerHideButtonsWhenPaused
 @supportURL     https://github.com/pabli24/YTPlayerHideButtonsWhenPaused/issues
+@preprocessor   stylus
+@var            checkbox oHide    "Show buttons on hover when paused" 1
+@var            number   oPaused  "Buttons opacity when paused"       [1, 0, 1, 0.01]
+@var            number   oPlaying "Buttons opacity when playing"      [1, 0, 1, 0.01]
 ==/UserStyle== */
 
 @-moz-document domain("youtube.com") {
-.paused-mode:not(.unstarted-mode) > div:not(.html5-video-container) {
-    opacity: 0
+if oHide {
+	.paused-mode:not(.unstarted-mode) > div:not(.html5-video-container) {
+		opacity: 0
+	}
 }
 .paused-mode:hover > div:not(.html5-video-container) {
-    opacity: 1
+	opacity: oPaused
+}
+.playing-mode:hover > div:not(.html5-video-container):not(.ytp-caption-window-container) {
+	opacity: oPlaying
 }
 }
